@@ -1,17 +1,28 @@
 import React from 'react';
-import AddBoxIcon from '@material-ui/icons/AddBox';export const Contanierr=()=>{
+import AddBoxIcon from '@material-ui/icons/AddBox';
+export const Contanierr=()=>{
     return(
         <>
             <div className='wraper'>
-                <div className='inner'>
+            <div className='top'>
                     <h1>TODO List</h1>
-                    <div className='btn&inp'>
+                    <div className='btninp'>
                        <input type='text'  />
-                     <AddBoxIcon />
+                     <button >+</button>
                     </div>
-                    <ol>
+                    </div>
+                <div className='inner'>
+
+                 
+                    <ul>
+                        <li>hellog</li>
                         <li>hello</li>
-                    </ol>
+                        <li>hello</li>
+                        <li>hello</li>
+                        <li>hello</li>
+                 
+                    </ul>
+          
                 </div>
             </div>
         </>
