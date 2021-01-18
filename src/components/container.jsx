@@ -1,5 +1,6 @@
 import React from 'react';
-import AddBoxIcon from '@material-ui/icons/AddBox';
+import DeleteIcon from '@material-ui/icons/Delete';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 export const Contanierr=()=>{
     return(
         <>
@@ -8,19 +9,14 @@ export const Contanierr=()=>{
                     <h1>TODO List</h1>
                     <div className='btninp'>
                        <input type='text'  />
-                     <button >+</button>
+                    <AddCircleIcon className='btnadd' />
                     </div>
                     </div>
-                <div className='inner'>
-
-                 
+                <div className='inner'> 
                     <ul>
-                        <li>hellog</li>
-                        <li>hello</li>
-                        <li>hello</li>
-                        <li>hello</li>
-                        <li>hello</li>
-                 
+                     <div className='list'>
+                         <DeleteIcon className='btnsub' /> <li>hello</li>
+                     </div>
                     </ul>
           
                 </div>

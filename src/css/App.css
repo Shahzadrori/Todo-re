@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Nova+Flat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Texturina:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 *{
     margin: 0%;
     padding: 0%;
@@ -53,7 +54,6 @@ div.inner{
     max-width:500px ;
     word-wrap:break-word;
     font-family: 'Lato', sans-serif;
-    padding-left: 15px;
 
 }
 h1{
@@ -69,10 +69,10 @@ input{
     margin-left: 10px;
     outline: none;
     border:none;
-    background-color: #035aa6;
+    background-color: #150485;
     color: white;
     padding: 5px;
-    font-family: 'Texturina', serif;
+    font-family: 'Varela Round', sans-serif;
     font-size: 15px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -80,17 +80,24 @@ input{
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
-button{
+.btnadd{
     position: absolute;
     right: 20px;
-    padding: 7px;
-
-    font-size: 20px;
-    border: none;
-    outline: none;
-    border-radius:40% ;
-    -webkit-border-radius:40% ;
-    -moz-border-radius:40% ;
-    -ms-border-radius:40% ;
-    -o-border-radius:40% ;
+    margin-top: 3px;
+}
+.btnsub{
+    margin-right: 15px;
+}
+ul{
+    list-style-position: inside;
+    list-style-type: none;
+}
+div.list{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin-top: 5px;
+}
+li{
+    color: #09015f;
 }
