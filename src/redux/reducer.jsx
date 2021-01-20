@@ -1,5 +1,5 @@
 import { initstate } from "./state";
-import { ADD_TASK, DELETE_TASK,CLEAR } from "./type";
+import { ADD_TASK, DELETE_TASK,CLEAR, EDIT_TODO } from "./type";
 export const Reducer=(state = initstate , action)=>{
     debugger
 
@@ -8,7 +8,7 @@ export const Reducer=(state = initstate , action)=>{
      case ADD_TASK:
          return{
              ...state,
-         task : [...state.task, action.payload]
+         task : [...state.task, action.payload],
          }; 
          case DELETE_TASK : 
          return {
@@ -20,6 +20,11 @@ export const Reducer=(state = initstate , action)=>{
                  ...state,
                  task : []
              }
+             case EDIT_TODO :
+                 return{
+                     ...state,
+                    //  task :  
+                 }
         default:  return state;
     }
 }
