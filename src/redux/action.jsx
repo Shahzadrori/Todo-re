@@ -16,19 +16,16 @@ export const deletetask =(id) =>{
         payload : id
     }
 }
-export const cleartask = (Task) =>{
+export const cleartask = () =>{
     return{
-        type : CLEAR ,
-        payload : {
-            label : Task
-        }
+        type : CLEAR 
     }
 }
 
 export const edittask = (id) =>{
     return{
         type : EDIT_TODO,
-        payload : id
+        payload : id,
     }
 }
  

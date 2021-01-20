@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import DeleteIcon from "@material-ui/icons/Delete";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import DeleteForeverSharpIcon from "@material-ui/icons/DeleteForeverSharp";
-import EditIcon from '@material-ui/icons/Edit';
+import EditIcon from "@material-ui/icons/Edit";
 import { connect } from "react-redux";
 import { addtask, deletetask, cleartask, edittask } from "../redux/action";
 const Contanierr = (props) => {
-  console.log("props", props);
   const [Task, setTask] = useState();
-  const [item, setitem] = useState();
-
+  const [Edit, setEdit] = useState(false);
+  const [Defaultedit, setDefaultedit] = useState("");
   return (
     <>
       <div className="wraper">
@@ -23,15 +22,20 @@ const Contanierr = (props) => {
             />
             <AddCircleIcon
               className="btnadd"
-              onClick={() => {props.addtask(Task)
-              setTask('')
+              onClick={() => {
+                if(Edit){
+                  props.edittask(Defaultedit)
+                }
+                props.addtask(Task);
+                setTask("");
               }}
             />
           </div>
           <DeleteForeverSharpIcon
             className="clearbtn"
-            onClick={() => {props.cleartask(Task)
-            setTask('')
+            onClick={() => {
+              props.cleartask();
+              setTask("");
             }}
           />
         </div>
@@ -44,11 +48,17 @@ const Contanierr = (props) => {
                     className="btnsub"
                     onClick={() => props.deletetask(todo.id)}
                   />
-
-                  <li key={props.id} id={props.id}>
+                  <li key={props.id} id={props.id} value={todo.label}>
                     {todo.label}
-                  </li> <EditIcon className='edit' onClick={()=> {setTask(todo.label)
-                  }}/>
+                  </li>
+                  <EditIcon
+                    className="edit"
+                    onClick={() => {
+                      setTask(todo.label)
+                      setDefaultedit(todo.id)
+                      setEdit(true)
+                    }}
+                  />
                 </div>
               </>
             ))}
@@ -72,12 +82,12 @@ const mapdispatch = (dispatch) => {
     deletetask: (id) => {
       dispatch(deletetask(id));
     },
-    cleartask: (Task) => {
-      dispatch(cleartask(Task));
+    cleartask: () => {
+      dispatch(cleartask());
     },
-    edittask : (id) =>{
-        dispatch(edittask(id))
-    }
+    edittask: (id) => {
+      dispatch(edittask(id));
+    },
   };
 };
 
