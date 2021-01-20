@@ -22,8 +22,8 @@ export const Reducer=(state = initstate , action)=>{
              }
              case EDIT_TODO :
                  return{
-                     ...state,
-                    //  task :  
+                    //  ...state,
+                   task : state.task(todo => todo.id !== action.payload)
                  }
         default:  return state;
     }

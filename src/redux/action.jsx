@@ -1,4 +1,4 @@
-import { ADD_TASK, CLEAR, DELETE_TASK,EDIT } from "./type";
+import { ADD_TASK, CLEAR, DELETE_TASK, EDIT_TODO } from "./type";
 export const addtask = (Task) => {
     return {
         type: ADD_TASK,
@@ -22,6 +22,13 @@ export const cleartask = (Task) =>{
         payload : {
             label : Task
         }
+    }
+}
+
+export const edittask = (id) =>{
+    return{
+        type : EDIT_TODO,
+        payload : id
     }
 }
  

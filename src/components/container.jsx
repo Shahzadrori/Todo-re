@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import DeleteIcon from "@material-ui/icons/Delete";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import DeleteForeverSharpIcon from "@material-ui/icons/DeleteForeverSharp";
+import EditIcon from '@material-ui/icons/Edit';
 import { connect } from "react-redux";
-import { addtask, deletetask, cleartask } from "../redux/action";
+import { addtask, deletetask, cleartask, edittask } from "../redux/action";
 const Contanierr = (props) => {
   console.log("props", props);
   const [Task, setTask] = useState();
@@ -22,17 +23,20 @@ const Contanierr = (props) => {
             />
             <AddCircleIcon
               className="btnadd"
-              onClick={() => props.addtask(Task)}
+              onClick={() => {props.addtask(Task)
+              setTask('')
+              }}
             />
           </div>
           <DeleteForeverSharpIcon
             className="clearbtn"
-            onClick={() => props.cleartask(Task)}
-          ></DeleteForeverSharpIcon>
+            onClick={() => {props.cleartask(Task)
+            setTask('')
+            }}
+          />
         </div>
         <div className="inner">
           <ul>
-            {" "}
             {props.task.map((todo) => (
               <>
                 <div className="list">
@@ -43,7 +47,8 @@ const Contanierr = (props) => {
 
                   <li key={props.id} id={props.id}>
                     {todo.label}
-                  </li>
+                  </li> <EditIcon className='edit' onClick={()=> {setTask(todo.label)
+                  }}/>
                 </div>
               </>
             ))}
@@ -70,6 +75,9 @@ const mapdispatch = (dispatch) => {
     cleartask: (Task) => {
       dispatch(cleartask(Task));
     },
+    edittask : (id) =>{
+        dispatch(edittask(id))
+    }
   };
 };
 

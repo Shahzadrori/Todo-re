@@ -42,6 +42,7 @@ div.top {
   padding-bottom: 20px;
 }
 div.inner {
+  position: relative;
   background-image: url("https://lh3.googleusercontent.com/qt0p8XE5hCykapgEJUyZkUefV6jFPutHHigwUgTrW4Zb_kNXZsDqnBGemoZpw0SJ9nBQKRk=s152");
   background-repeat: no-repeat;
   background-size: cover;
@@ -90,6 +91,10 @@ input {
   position: absolute;
   right: 20px;
   margin-top: 5px;
+}
+.edit{
+ position: absolute;
+  right: 20px;
 }
 ul {
   list-style-position: inside;
