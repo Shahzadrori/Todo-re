@@ -1,3 +1,3 @@
 export const initstate={
-  task : 40
+  task : []
 }
