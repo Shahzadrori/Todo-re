@@ -70,7 +70,7 @@ div.btninp {
 input {
   margin-left: 10px;
   outline: none;
-  border:  none;
+  border: none;
   background-color: #150485;
   color: white;
   padding: 5px;
@@ -82,13 +82,12 @@ input {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-input:focus{
+input:focus {
   transform: scale(1.02);
   -webkit-transform: scale(1.02);
   -moz-transform: scale(1.02);
   -ms-transform: scale(1.02);
   -o-transform: scale(1.02);
-  
 }
 .btnadd {
   position: absolute;
@@ -103,31 +102,29 @@ input:focus{
   right: 20px;
   margin-top: 5px;
 }
-.edit{
- position: absolute;
+.edit {
+  position: absolute;
   left: 30px;
 }
 ul {
   list-style-position: inside;
   list-style-type: none;
-  
 }
 div.list {
   display: flex;
   flex-direction: row;
   padding: 5px;
   margin-top: 5px;
-
 }
 li {
   margin-left: 10px;
   color: #09015f;
-  word-wrap:break-word;
+  word-wrap: break-word;
 }
 
-  @media(min-height:301px){
-  div.inner{
+@media (min-height: 301px) {
+  div.inner {
     overflow-y: scroll;
-    border-bottom-right-radius:none ;
+    border-bottom-right-radius: none;
   }
-}  
+}
