@@ -13,7 +13,7 @@ const Contanierr = (props) => {
     <>
       <div className="wraper">
         <div className="top">
-          <h1>TODO List</h1>
+          <h1> TODO List</h1>
           <div className="btninp">
             <input
               type="text"
