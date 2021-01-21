@@ -6,7 +6,7 @@ import EditIcon from "@material-ui/icons/Edit";
 import { connect } from "react-redux";
 import { addtask, deletetask, cleartask, edittask } from "../redux/action";
 const Contanierr = (props) => {
-  const [Task, setTask] = useState();
+  const [Task, setTask] = useState("");
   const [Edit, setEdit] = useState(false);
   const [Defaultedit, setDefaultedit] = useState("");
   return (
@@ -23,11 +23,17 @@ const Contanierr = (props) => {
             <AddCircleIcon
               className="btnadd"
               onClick={() => {
-                if(Edit){
-                  props.edittask(Defaultedit)
+                if (Task !== "") {
+                  if (Edit) {
+                    props.edittask(Defaultedit);
+                    setTask("");
+                  } else {
+                    props.addtask(Task);
+                    setTask("");
+                  }
+                } else {
+                  alert("Input should be not empty");
                 }
-                props.addtask(Task);
-                setTask("");
               }}
             />
           </div>
@@ -54,9 +60,9 @@ const Contanierr = (props) => {
                   <EditIcon
                     className="edit"
                     onClick={() => {
-                      setTask(todo.label)
-                      setDefaultedit(todo.id)
-                      setEdit(true)
+                      setTask(todo.label);
+                      setDefaultedit(todo.id);
+                      setEdit(true);
                     }}
                   />
                 </div>
