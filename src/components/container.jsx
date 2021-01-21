@@ -8,7 +8,7 @@ import { addtask, deletetask, cleartask, edittask } from "../redux/action";
 const Contanierr = (props) => {
   const [Task, setTask] = useState("");
   const [Edit, setEdit] = useState(false);
-  const [Defaultedit, setDefaultedit] = useState("");
+  const [Defaultedit, setDefaultedit] = useState();
   return (
     <>
       <div className="wraper">
