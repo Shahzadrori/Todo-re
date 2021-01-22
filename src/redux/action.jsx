@@ -5,6 +5,7 @@ export const addtask = (Task) => {
     payload: {
       label: Task,
       id: Math.ceil(Math.random() * 100),
+      // id: Date.now()
     },
   };
 };

@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #0e49b5;
+  background-color: #ffdf91;
   position: relative;
 }
 
@@ -24,9 +24,10 @@ div.wraper {
 }
 div.top {
   position: relative;
-  background-image: url("https://lh3.googleusercontent.com/pDM4nhYc5YL_CzBA24I3bFqsQWOTaUXelP3MbeH-ODsQ4CgwSiMEVc6mjo-FQuwM47Z0oLw=s152");
+  background-image: url("https://lh3.googleusercontent.com/V7Ypjq60m88kp3kchqBrxfavc1V3f-XmuwFfUCKUdiEYvxzeMTX-sxCCafCI83a07slo=s85");
   background-repeat: no-repeat;
   background-size: cover;
+  /* background-color: #f88f01; */
   border: 1px solid #0e49b5;
   border-style: ridge;
   border-bottom: none;
@@ -48,12 +49,12 @@ div.inner {
   background-image: url("https://lh3.googleusercontent.com/qt0p8XE5hCykapgEJUyZkUefV6jFPutHHigwUgTrW4Zb_kNXZsDqnBGemoZpw0SJ9nBQKRk=s152");
   background-repeat: no-repeat;
   background-size: cover;
+  /* background-color: #ffb26b; */
   border: 1px solid #0e49b5;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   width: 300px;
   height: 300px;
-  max-width: 500px;
   font-family: "Lato", sans-serif;
   box-shadow: 3px 4px 15px;
   box-shadow: 3px 4px 15px;
@@ -91,7 +92,7 @@ input:focus {
 }
 .btnadd {
   position: absolute;
-  right: 20px;
+  right: 40px;
   margin-top: 3px;
 }
 .btnsub {
@@ -99,12 +100,32 @@ input:focus {
 }
 .clearbtn {
   position: absolute;
-  right: 20px;
+  right: 5px;
   margin-top: 5px;
+  margin-bottom: 30px;
+  outline: none;
+  border: none;
+  width: 70px;
+  background-color: #e8eae6;
+  padding: 4px 3px  2px 3px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.clearbtn:hover{
+  background-color: #ffa62b;
+  color:aliceblue
 }
 .edit {
   position: absolute;
   left: 30px;
+}
+.del{
+  position: absolute;
+  right: 5px;
+  margin-top: 3px;
 }
 ul {
   list-style-position: inside;
@@ -121,8 +142,11 @@ li {
   color: #09015f;
   word-wrap: break-word;
 }
+li::selection{
+  text-decoration: line-through;
+}
 
-@media (min-height: 301px) {
+@media (min-height: 300px) {
   div.inner {
     overflow-y: scroll;
     border-bottom-right-radius: none;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import DeleteIcon from "@material-ui/icons/Delete";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import DeleteForeverSharpIcon from "@material-ui/icons/DeleteForeverSharp";
@@ -6,9 +6,12 @@ import EditIcon from "@material-ui/icons/Edit";
 import { connect } from "react-redux";
 import { addtask, deletetask, cleartask, edittask } from "../redux/action";
 const Contanierr = (props) => {
-  const [Task, setTask] = useState();
+  useEffect(() => {
+    alert('<h1>Welcome</h1>')
+ }, [])
+  const [Task, setTask] = useState("");
   const [Edit, setEdit] = useState(false);
-  const [Defaultedit, setDefaultedit] = useState("");
+  const [Defaultedit, setDefaultedit] = useState();
   return (
     <>
       <div className="wraper">
@@ -22,11 +25,12 @@ const Contanierr = (props) => {
             />
             <AddCircleIcon
               className="btnadd"
-              onClick={(ev) => {
-                ev.preventDefault();
-                if (Task != "") {
+              onClick={() => {
+                if (Task !== "") {
                   props.addtask(Task);
                   setTask("");
+                }
+                if (Task !== "") {
                   if (Edit === true) {
                     props.edittask(Defaultedit);
                     setTask("");
@@ -35,29 +39,28 @@ const Contanierr = (props) => {
                   alert("Input should be not empty");
                 }
               }}
-            />
+            /><DeleteForeverSharpIcon className='del'onClick={()=> setTask('')  }/>
           </div>
-          <DeleteForeverSharpIcon
+          <button
             className="clearbtn"
             onClick={() => {
               props.cleartask();
               setTask("");
             }}
-          />
+          >Clear All</button>
         </div>
         <div className="inner">
           <ul>
-            {props.task.map((todo) => (
+            {props.task.map((todo, index) => (
               <>
                 <div className="list">
                   <DeleteIcon
                     className="btnsub"
                     onClick={() => props.deletetask(todo.id)}
                   />
-                  <li key={props.id} id={props.id}>
-                    {todo.id}
-                    {todo.label}
-                  </li>
+
+                  <li key={index} >{todo.label}{todo.id}</li>
+
                   <EditIcon
                     className="edit"
                     onClick={() => {

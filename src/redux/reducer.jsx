@@ -15,7 +15,6 @@ export const Reducer = (state = initstate, action) => {
       };
     case CLEAR:
       return {
-        ...state,
         task: [],
       };
     case EDIT_TODO:
