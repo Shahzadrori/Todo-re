@@ -50,7 +50,7 @@ const Contanierr = (props) => {
           >Clear All</button>
         </div>
         <div className="inner">
-          <ul>
+          <ol>
             {props.task.map((todo, index) => (
               <>
                 <div className="list">
@@ -72,7 +72,7 @@ const Contanierr = (props) => {
                 </div>
               </>
             ))}
-          </ul>
+          </ol>
         </div>
       </div>
     </>
