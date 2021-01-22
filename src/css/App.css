@@ -44,12 +44,11 @@ div.top {
   box-shadow: 3px 4px 10px;
 }
 div.inner {
-  word-wrap: break-word !important;
   position: relative;
   background-image: url("https://lh3.googleusercontent.com/qt0p8XE5hCykapgEJUyZkUefV6jFPutHHigwUgTrW4Zb_kNXZsDqnBGemoZpw0SJ9nBQKRk=s152");
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-color: #ffb26b; */
+  background-color: #ffb26b;
   border: 1px solid #0e49b5;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -58,6 +57,7 @@ div.inner {
   font-family: "Lato", sans-serif;
   box-shadow: 3px 4px 15px;
   box-shadow: 3px 4px 15px;
+  word-wrap: break-word ;
 }
 h1 {
   color: #393e46;

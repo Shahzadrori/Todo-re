@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import { addtask, deletetask, cleartask, edittask } from "../redux/action";
 const Contanierr = (props) => {
   useEffect(() => {
-    alert('<h1>Welcome</h1>')
+    alert('Welcome')
  }, [])
   const [Task, setTask] = useState("");
   const [Edit, setEdit] = useState(false);
@@ -59,7 +59,7 @@ const Contanierr = (props) => {
                     onClick={() => props.deletetask(todo.id)}
                   />
 
-                  <li key={index} >{todo.label}{todo.id}</li>
+                  <li key={index} >{todo.label}</li>
 
                   <EditIcon
                     className="edit"
