@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #ffdf91;
+  background-color: #80ffdb;
   position: relative;
 }
 
@@ -27,7 +27,6 @@ div.top {
   background-image: url("https://lh3.googleusercontent.com/V7Ypjq60m88kp3kchqBrxfavc1V3f-XmuwFfUCKUdiEYvxzeMTX-sxCCafCI83a07slo=s85");
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-color: #f88f01; */
   border: 1px solid #0e49b5;
   border-style: ridge;
   border-bottom: none;
@@ -48,7 +47,6 @@ div.inner {
   background-image: url("https://lh3.googleusercontent.com/qt0p8XE5hCykapgEJUyZkUefV6jFPutHHigwUgTrW4Zb_kNXZsDqnBGemoZpw0SJ9nBQKRk=s152");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #ffb26b;
   border: 1px solid #0e49b5;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;

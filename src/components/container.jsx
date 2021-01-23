@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import DeleteIcon from "@material-ui/icons/Delete";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import DeleteForeverSharpIcon from "@material-ui/icons/DeleteForeverSharp";
@@ -7,11 +7,12 @@ import { connect } from "react-redux";
 import { addtask, deletetask, cleartask, edittask } from "../redux/action";
 const Contanierr = (props) => {
   useEffect(() => {
-    alert('Welcome')
- }, [])
+    alert("Welcome");
+  }, []);
   const [Task, setTask] = useState("");
   const [Edit, setEdit] = useState(false);
   const [Defaultedit, setDefaultedit] = useState();
+
   return (
     <>
       <div className="wraper">
@@ -39,7 +40,11 @@ const Contanierr = (props) => {
                   alert("Input should be not empty");
                 }
               }}
-            /><DeleteForeverSharpIcon className='del'onClick={()=> setTask('')  }/>
+            />
+            <DeleteForeverSharpIcon
+              className="del"
+              onClick={() => setTask("")}
+            />
           </div>
           <button
             className="clearbtn"
@@ -47,7 +52,9 @@ const Contanierr = (props) => {
               props.cleartask();
               setTask("");
             }}
-          >Clear All</button>
+          >
+            Clear All
+          </button>
         </div>
         <div className="inner">
           <ol>
@@ -59,7 +66,7 @@ const Contanierr = (props) => {
                     onClick={() => props.deletetask(todo.id)}
                   />
 
-                  <li key={index} >{todo.label}</li>
+                  <li key={index}>{todo.label}</li>
 
                   <EditIcon
                     className="edit"
