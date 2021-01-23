@@ -3,6 +3,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import DeleteForeverSharpIcon from "@material-ui/icons/DeleteForeverSharp";
 import EditIcon from "@material-ui/icons/Edit";
+import CheckIcon from '@material-ui/icons/Check';
 import { connect } from "react-redux";
 import { addtask, deletetask, cleartask, edittask } from "../redux/action";
 const Contanierr = (props) => {
@@ -12,6 +13,7 @@ const Contanierr = (props) => {
   const [Task, setTask] = useState("");
   const [Edit, setEdit] = useState(false);
   const [Defaultedit, setDefaultedit] = useState();
+  const [check,setcheck] = useState(false);
 
   return (
     <>
@@ -65,10 +67,8 @@ const Contanierr = (props) => {
                     className="btnsub"
                     onClick={() => props.deletetask(todo.id)}
                   />
-
-                  <li key={index}>{todo.label}</li>
-
-                  <EditIcon
+                 
+                 <EditIcon
                     className="edit"
                     onClick={() => {
                       setTask(todo.label);
@@ -76,6 +76,9 @@ const Contanierr = (props) => {
                       setEdit(true);
                     }}
                   />
+                  {/* <CheckIcon className='check' onClick={ }
+                 /> */}
+                  <li key={index} style={{textDecoration: check ? 'line-through': null}} >{todo.label} </li>
                 </div>
               </>
             ))}

@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #80ffdb;
+  background-color: #cdd0cb;
   position: relative;
 }
 
@@ -22,11 +22,13 @@ div.wraper {
   justify-content: center;
   height: 100vh;
 }
+
 div.top {
   position: relative;
-  background-image: url("https://lh3.googleusercontent.com/V7Ypjq60m88kp3kchqBrxfavc1V3f-XmuwFfUCKUdiEYvxzeMTX-sxCCafCI83a07slo=s85");
+  /* background-image: url("https://lh3.googleusercontent.com/V7Ypjq60m88kp3kchqBrxfavc1V3f-XmuwFfUCKUdiEYvxzeMTX-sxCCafCI83a07slo=s85");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background-color: #e8eae6;
   border: 1px solid #0e49b5;
   border-style: ridge;
   border-bottom: none;
@@ -42,11 +44,20 @@ div.top {
   padding-bottom: 20px;
   box-shadow: 3px 4px 10px;
 }
+.top:hover {
+  box-shadow: 1px 3px 10px;
+  transform: scale(1.001);
+  -webkit-transform: scale(1.001);
+  -moz-transform: scale(1.001);
+  -ms-transform: scale(1.001);
+  -o-transform: scale(1.001);
+}
 div.inner {
   position: relative;
-  background-image: url("https://lh3.googleusercontent.com/qt0p8XE5hCykapgEJUyZkUefV6jFPutHHigwUgTrW4Zb_kNXZsDqnBGemoZpw0SJ9nBQKRk=s152");
+  /* background-image: url("https://lh3.googleusercontent.com/qt0p8XE5hCykapgEJUyZkUefV6jFPutHHigwUgTrW4Zb_kNXZsDqnBGemoZpw0SJ9nBQKRk=s152");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background-color: white;
   border: 1px solid #0e49b5;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -57,8 +68,9 @@ div.inner {
   box-shadow: 3px 4px 15px;
   word-wrap: break-word ;
   overflow-y: scroll;
-    border-bottom-right-radius: none;
+  border-bottom-right-radius: none;
 }
+
 h1 {
   color: #393e46;
 }
@@ -106,7 +118,7 @@ input:focus {
   outline: none;
   border: none;
   width: 70px;
-  background-color: #e8eae6;
+  background-color: grey;
   padding: 4px 3px  2px 3px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -131,13 +143,16 @@ input:focus {
   right: 5px;
   margin-top: 3px;
 }
+.check{
+  margin-left: 10px;
+}
 ol {
   list-style-position: inside;
   list-style-type: none;
 }
 div.list {
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
   padding: 5px;
   margin-top: 5px;
 }
