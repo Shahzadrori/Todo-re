@@ -76,9 +76,7 @@ const Contanierr = (props) => {
                       setEdit(true);
                     }}
                   />
-                  {/* <CheckIcon className='check' onClick={ }
-                 /> */}
-                  <li key={index} style={{textDecoration: check ? 'line-through': null}} >{todo.label} </li>
+                  <li key={index} >{todo.label} </li>
                 </div>
               </>
             ))}
