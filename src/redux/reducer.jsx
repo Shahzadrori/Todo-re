@@ -1,7 +1,6 @@
 import { initstate } from "./state";
 import { ADD_TASK, DELETE_TASK, CLEAR, EDIT_TODO } from "./type";
 export const Reducer = (state = initstate, action) => {
-  console.log(action.payload);
   switch (action.type) {
     case ADD_TASK:
       return {

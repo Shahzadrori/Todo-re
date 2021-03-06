@@ -7,13 +7,13 @@ import CheckIcon from '@material-ui/icons/Check';
 import { connect } from "react-redux";
 import { addtask, deletetask, cleartask, edittask } from "../redux/action";
 const Contanierr = (props) => {
-  useEffect(() => {
-    alert("Welcome");
-  }, []);
+  // useEffect(() => {
+  //   alert("Welcome");
+  // }, []);
   const [Task, setTask] = useState("");
   const [Edit, setEdit] = useState(false);
   const [Defaultedit, setDefaultedit] = useState();
-  const [check,setcheck] = useState(false);
+  // const [check,setcheck] = useState(false);
 
   return (
     <>
